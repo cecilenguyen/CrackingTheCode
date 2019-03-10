@@ -1,0 +1,33 @@
+/* 2.7 Intersection: Given two (singly) linked lists, determine if the two lists intersect. Return the intersecting node. Note that the intersection is defined based on reference, not value. That is, if the kth node of the first linked list is the exact same node (by reference) as the jth node of the second linked list, then they are intersecting. */
+
+/*
+	1. Loop through both lists simultaneously
+	2. When you reach the end of one list, continue back at the start of the opposite list
+	3. At each step through the lists, check to see if the nodes are the same
+	4. If they are the same, return the node
+	5. If you make it through each of the lists twice, there is  no intersection. Return false
+*/
+
+function listIntersection(l1, l2) {
+	let l1Runner = l1;
+	let l2Runner = l2;
+
+	while (l1Runner && l2Runner) {
+		if (l1Runner.val == l2Runner.val) {
+			return l1Runner;
+		}
+
+		l1Runner = l1.next;
+		l2Runner = l2.next;
+
+		if (l1Runner && !l2Runner) {
+			l2Runner = l1;
+		}
+
+		if (!l1Runner && l2Runner) {
+			l1Runner = l2;
+		}
+	}
+
+	return false;
+}

@@ -1,7 +1,7 @@
 /* Check Permutation: Given two strings, write a method to decide if one is a permutation of the other. */
 
 /* 
-	This solution assumes the chars are in unicode,, case doesn't matter, and no whitespace
+	This solution assumes the chars are in unicode, case doesn't matter, and no whitespace
 	1. check if lengths are the same. If they're different we'll say they're not permutations
 	2. make empty array of 26 filled with 0s to signify count of each letter in the alphebet
 	3. loop through the first string and count up the number of times each letter appears

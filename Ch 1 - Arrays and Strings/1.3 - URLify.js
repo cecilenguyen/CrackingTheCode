@@ -5,9 +5,10 @@ that you are given the "true" length of the string. (Note: If implementing in Ja
 please use a character array so that you can perform this operation in place.) */
 
 /*
-	1. loop through each character of the string
-	2. if it is a space, concatenate '%20' to the newStr
-	3. if it's a letter, concatenate that letter into the new string
+	1. Create a new empty string
+	2. Loop through each character of the string
+	3. If it is a space, concatenate '%20' to the newStr
+	4. If it's a letter, concatenate that letter into the new string
 */
 function urlify(str) {
 	let newStr = '';
